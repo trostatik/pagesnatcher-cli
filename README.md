@@ -15,7 +15,7 @@ pagesnatcher-cli clone https://demoportfolio.framer.website/ -o /tmp/output -z z
 ```
 
 ## Installation
-Either build the go file (`go build`), or download the latest release as an executable
+Install with go (`go install github.com/trostatik/pagesnatcher-cli@v0.0.1`), or download the latest [release](https://github.com/trostatik/pagesnatcher-cli/releases/) as an executable
 
 ### Dependencies
 
