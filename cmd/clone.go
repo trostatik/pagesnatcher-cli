@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"fmt"
+	"os"
 
 	"github.com/spf13/cobra"
 	"github.com/trostatik/pagesnatcher"
@@ -26,7 +27,7 @@ var cloneCmd = &cobra.Command{
 		}
 		cfg.Apply(profile)
 		srv := pagesnatcher.NewService(cfg)
-		if err := srv.DownloadSite(nil); err != nil {
+		if err := srv.DownloadSite(os.Stdout); err != nil {
 			panic(err)
 		}
 		fmt.Println("Site downloaded")
