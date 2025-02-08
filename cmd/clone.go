@@ -26,7 +26,7 @@ var cloneCmd = &cobra.Command{
 		}
 		cfg.Apply(profile)
 		srv := pagesnatcher.NewService(cfg)
-		if err := srv.DownloadSite(); err != nil {
+		if err := srv.DownloadSite(nil); err != nil {
 			panic(err)
 		}
 		fmt.Println("Site downloaded")
